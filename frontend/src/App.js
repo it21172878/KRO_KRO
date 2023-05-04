@@ -38,7 +38,8 @@ function App() {
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark">
+          {/* <Navbar bg="dark" variant="dark"> */}
+          <Navbar className="navbar">
             <Container>
               <LinkContainer to="/">
                 <Navbar.Brand>KRO Cloths</Navbar.Brand>
@@ -55,7 +56,12 @@ function App() {
                     )}
                   </Link>
                   {userInfo ? (
-                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                    // <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                    <NavDropdown
+                      className="navdropdown"
+                      title={userInfo.name}
+                      id="basic-nav-dropdown"
+                    >
                       <LinkContainer to="/profile">
                         <NavDropdown.Item>User Profile</NavDropdown.Item>
                       </LinkContainer>

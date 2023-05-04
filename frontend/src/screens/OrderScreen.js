@@ -180,7 +180,7 @@ export default function OrderScreen() {
               <Card.Title>Items</Card.Title>
               <ListGroup variant="flush">
                 {order.orderItems.map((item) => (
-                  <ListGroup.Item key={item._id}>
+                  <ListGroup.Item className="card" key={item._id}>
                     <Row className="align-items-center">
                       <Col md={6}>
                         <img
@@ -206,25 +206,25 @@ export default function OrderScreen() {
             <Card.Body>
               <Card.Title>Order Summary</Card.Title>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Items</Col>
                     <Col>${order.itemsPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Shipping</Col>
                     <Col>${order.shippingPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Tax</Col>
                     <Col>${order.taxPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>
                       <strong> Order Total</strong>
@@ -235,7 +235,7 @@ export default function OrderScreen() {
                   </Row>
                 </ListGroup.Item>
                 {!order.isPaid && (
-                  <ListGroup.Item>
+                  <ListGroup.Item className="card">
                     {isPending ? (
                       <LoadingBox />
                     ) : (

@@ -116,7 +116,7 @@ export default function PlaceOrderScreen() {
               <Card.Title>Items</Card.Title>
               <ListGroup variant="flush">
                 {cart.cartItems.map((item) => (
-                  <ListGroup.Item key={item._id}>
+                  <ListGroup.Item className="card" key={item._id}>
                     <Row className="align-items-center">
                       <Col md={6}>
                         <img
@@ -143,25 +143,25 @@ export default function PlaceOrderScreen() {
             <Card.Body>
               <Card.Title>Order Summary</Card.Title>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Items</Col>
                     <Col>${cart.itemsPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Shipping</Col>
                     <Col>${cart.shippingPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Tax</Col>
                     <Col>${cart.taxPrice.toFixed(2)}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>
                       <strong> Order Total</strong>
@@ -171,7 +171,7 @@ export default function PlaceOrderScreen() {
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <div className="d-grid">
                     <Button
                       type="button"
