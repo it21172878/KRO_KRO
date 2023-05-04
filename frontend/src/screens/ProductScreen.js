@@ -92,21 +92,23 @@ function ProductScreen() {
           ></img>
         </Col>
         <Col md={3}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
+          <ListGroup className="card" variant="flush">
+            <ListGroup.Item className="card">
               <Helmet>
                 <title>{product.name}</title>
               </Helmet>
               <h1>{product.name}</h1>
             </ListGroup.Item>
-            <ListGroup.Item>
+            <ListGroup.Item className="card">
               <Rating
                 rating={product.rating}
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Price:${product.price}</ListGroup.Item>
-            <ListGroup.Item>
+            <ListGroup.Item className="card">
+              Price:${product.price}
+            </ListGroup.Item>
+            <ListGroup.Item className="card">
               Description:
               <p>{product.description}</p>
             </ListGroup.Item>
@@ -116,13 +118,13 @@ function ProductScreen() {
           <Card>
             <Card.Body>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Price:</Col>
                     <Col>${product.price}</Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item className="card">
                   <Row>
                     <Col>Status:</Col>
                     <Col>
@@ -136,7 +138,7 @@ function ProductScreen() {
                 </ListGroup.Item>
 
                 {product.countInStock > 0 && (
-                  <ListGroup.Item>
+                  <ListGroup.Item className="card">
                     <div className="d-grid">
                       <Button onClick={addToCartHandler} variant="primary">
                         Add to Cart
